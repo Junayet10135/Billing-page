@@ -1,5 +1,6 @@
 import React from 'react';
 import BillingPage from '../BillingPage/BillingPage';
+import Modal from './Modal';
 
 const Home = () => {
     return (
@@ -9,8 +10,10 @@ const Home = () => {
                     <h2>Billings</h2>
                     <input type="text" placeholder="Search" className="input input-bordered input-xs w-full max-w-xs text-black" />
                 </div>
-                <button class="btn btn-xs sm:btn-sm md:btn-sm lg:btn-sm">Add New Bill</button>
+                <label for="my-modal" class="btn btn-xs sm:btn-sm md:btn-sm lg:btn-sm">Add New Bill</label>
+                
             </div>
+            <Modal></Modal>
             <BillingPage></BillingPage>
         </div>
     );

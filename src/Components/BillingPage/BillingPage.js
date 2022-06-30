@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const BillingPage = () => {
+    const [bills, setBills] = useState([]);
+
+    useEffect(() => {
+        fetch('details.json')
+            .then(res => res.json())
+            .then(data => setBills(data));
+    }, []);
     return (
         <div className='mt-10'>
             <div class="overflow-x-auto">
@@ -17,7 +24,20 @@ const BillingPage = () => {
                         </tr>
                     </thead>
                     <tbody>
-                       
+                       {
+                        bills.sort((a,b) => b.id - a.id).map((bill) => <tr>
+                            <th>{bill.id}</th>
+                            <th>{bill.name}</th>
+                            <th>{bill.email}</th>
+                            <th>{bill.phone}</th>
+                            <th>{bill.paid}</th>
+                            <th><div className='flex items-center justify-center'>
+                                <button class="btn btn-xs">Edit</button>
+                                |
+                                <button class="btn btn-xs">Delete</button>
+                            </div></th>
+                        </tr>)
+                       }
                     </tbody>
                 </table>
             </div>

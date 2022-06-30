@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "name": "khan Bahadur",
+        "email": "khan.b@yahoo.com",
+	    "phone": 56677889,
+        "paid" : 50
+    }, {
+        "id": 2,
+        "name": "echa kha",
+        "email": "kha.e@yahoo.com",
+	    "phone": 566778810,
+        "paid" : 100
+    }, {
+        "id": 3,
+        "name": "mir jafar",
+        "email": "jafar.mir@yahoo.com",
+	    "phone": 17530000,
+        "paid" : 10
+    }
+]
